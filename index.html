@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <span>1-tasks</span>
+    <div id="ranglar"></div>
+    <p id="matn">Bu matn rangini o'zgartirishingiz mumkin.</p>
+    <p id="rang-ozgarishi">Hozirgi rang: qora</p>
+
+    <span>2-tasks</span>
+    <p id="soniyalar">0</p>
+    <button id="boshlash" class="tugma start">Boshlash</button>
+    <button id="toxtatish" class="tugma stop" disabled>Toxtatish</button>
+    <button id="qayta" class="tugma reset">Qayta</button>
+
+    <br>
+    <span>3-tasks</span>
+
+    <div class="qidiruv">
+      <input
+        type="text"
+        id="kategoriya-qidiruv"
+        placeholder="Kategoriya kiriting (masalan, Tabiat)"
+      />
+      <button class="tugma filtrla" id="filtrla">Filtrlash</button>
+      <button class="tugma qayta" id="qayta">Qayta Ko‘rsatish</button>
+    </div>
+    <div id="rasmlar-grid">
+      <div class="rasm-konteyner" data-kategoriya="Tabiat">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZE_TunpuVmKJx-qmkRAeuk8D09-o2w1u8vw&s"
+          alt="Tabiat"
+        />
+        <div class="kategoriya">Tabiat</div>
+      </div>
+      <div class="rasm-konteyner" data-kategoriya="Mashina">
+        <img
+          src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&height=900&width=1600&fit=bounds"
+          alt="Mashina"
+        />
+        <div class="kategoriya">Mashina</div>
+      </div>
+      <div class="rasm-konteyner" data-kategoriya="Hayvon">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQ9CQjK8kox2iyII-QT96Qo6F2Wfp11Hkaw&s"
+          alt="Hayvon"
+        />
+        <div class="kategoriya">Hayvon</div>
+      </div>
+
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
