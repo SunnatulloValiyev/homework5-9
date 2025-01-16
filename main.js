@@ -15,20 +15,18 @@ ranglar.forEach(rang => {
 });
 
 
-
+let vaqtOraliq;
 let soniyalar = 0;
-let vaqtOraliq; 
 const soniyalarElementi = document.getElementById('soniyalar');
 const boshlashTugma = document.getElementById('boshlash');
 const toxtatishTugma = document.getElementById('toxtatish');
-const qaytaTugma = document.getElementById('qayta');
+const qaytaTaymerTugma = document.getElementById('qayta-taymer');
 
 boshlashTugma.onclick = function () {
-    vaqtOraliq = setInterval(() => {
+    vaqtOraliq = setInterval(function () {
         soniyalar++;
         soniyalarElementi.textContent = soniyalar;
     }, 1000);
-
     boshlashTugma.disabled = true;
     toxtatishTugma.disabled = false;
 };
@@ -39,12 +37,20 @@ toxtatishTugma.onclick = function () {
     toxtatishTugma.disabled = true;
 };
 
-qaytaTugma.onclick = function () {
+qaytaTaymerTugma.onclick = function () {
     clearInterval(vaqtOraliq);
     soniyalar = 0;
     soniyalarElementi.textContent = soniyalar;
     boshlashTugma.disabled = false;
     toxtatishTugma.disabled = true;
+};
+
+const qaytaFiltrTugma = document.getElementById('qayta-filtr');
+qaytaFiltrTugma.onclick = function () {
+    qidiruvInput.value = '';
+    rasmlar.forEach(rasm => {
+        rasm.style.display = 'block';
+    });
 };
 
 const qidiruvInput = document.getElementById('kategoriya-qidiruv');

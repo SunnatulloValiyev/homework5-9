@@ -17,20 +17,18 @@
     <p id="soniyalar">0</p>
     <button id="boshlash" class="tugma start">Boshlash</button>
     <button id="toxtatish" class="tugma stop" disabled>Toxtatish</button>
-    <button id="qayta" class="tugma reset">Qayta</button>
-
+    <button id="qayta-taymer" class="tugma reset">Qayta</button>
+    
     <br>
     <span>3-tasks</span>
-
+    
     <div class="qidiruv">
-      <input
-        type="text"
-        id="kategoriya-qidiruv"
-        placeholder="Kategoriya kiriting (masalan, Tabiat)"
-      />
+      <input type="text" id="kategoriya-qidiruv" placeholder="Kategoriya kiriting (masalan, Tabiat)"/>
       <button class="tugma filtrla" id="filtrla">Filtrlash</button>
-      <button class="tugma qayta" id="qayta">Qayta Ko‘rsatish</button>
+      <button class="tugma qayta" id="qayta-filtr">Qayta Korsatish</button>
     </div>
+    
+    <br>
     <div id="rasmlar-grid">
       <div class="rasm-konteyner" data-kategoriya="Tabiat">
         <img
